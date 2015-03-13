@@ -21,3 +21,5 @@ mongoose.connection.once('open', function() {
     });
   });
 });
+
+module.exports = server;

@@ -4,8 +4,8 @@
   "description": "A prototype project for using Hapi.js and Mongoose",
   "main": "index.js",
   "scripts": {
-    "test": "start",
-    "dev": "MONGO_URL=mongodb://localhost/hapi-mongo PORT=3001 nodemon server/index.js"
+    "start": "MONGO_URL=mongodb://localhost/hapi-mongo PORT=3001 nodemon server/index.js",
+    "test": "MONGO_URL=mongodb://localhost/hapi-mongo-test lab -v -m 5000 test/acceptance test/unit"
   },
   "keywords": [
     "hapi",
@@ -18,6 +18,11 @@
     "good": "^5.1.2",
     "good-console": "^4.1.0",
     "hapi": "^8.2.0",
+    "joi": "^6.0.8",
     "mongoose": "^3.8.24"
+  },
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "lab": "^5.5.0"
   }
 }
